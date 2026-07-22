@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yeqin Shen | Personal Website</title>
+
+<style>
+:root{
+    --bg:#f4fbfb;
+    --bg2:#e8f7f8;
+    --primary:#4f8f96;
+    --secondary:#75b7bf;
+    --accent:#2f6970;
+    --white:#ffffff;
+    --text:#244147;
+    --light:#6f8f94;
+    --shadow:0 12px 35px rgba(0,0,0,.08);
+    --radius:18px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,var(--bg),var(--bg2));
+    color:var(--text);
+    line-height:1.7;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(12px);
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 22px;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:700;
+    color:var(--accent);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    color:var(--text);
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 25px 60px;
+}
+
+.hero-content{
+    max-width:1100px;
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.photo-box{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:white;
+    overflow:hidden;
+    border:8px solid rgba(255,255,255,.8);
+    box-shadow:var(--shadow);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.photo-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.photo-placeholder{
+    position:absolute;
+    color:#7f9ea3;
+    text-align:center;
+    font-size:15px;
+    padding:20px;
+}
+
+h1{
+    font-size:3.2rem;
+    color:var(--accent);
+}
+
+.subtitle{
+    font-size:1.3rem;
+    color:var(--primary);
+    margin:10px 0 25px;
+    font-weight:600;
+}
+
+.hero p{
+    max-width:700px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:13px 28px;
+    border-radius:30px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--accent);
+    transform:translateY(-3px);
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.section-title{
+    font-size:2rem;
+    margin-bottom:35px;
+    color:var(--accent);
+    position:relative;
+}
+
+.section-title:after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:var(--secondary);
+    border-radius:2px;
+    margin-top:10px;
+}
+
+.card{
+    background:white;
+    border-radius:var(--radius);
+    padding:35px;
+    box-shadow:var(--shadow);
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-8px);
+}
+
+.skill h3{
+    color:var(--primary);
+    margin-bottom:12px;
+}
+
+.activity{
+    background:white;
+    padding:28px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.contact{
+    text-align:center;
+}
+
+.email{
+    display:inline-block;
+    margin-top:20px;
+    color:white;
+    background:var(--primary);
+    padding:14px 28px;
+    border-radius:40px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.email:hover{
+    background:var(--accent);
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    color:var(--light);
+}
+
+@media(max-width:850px){
+
+.hero-content{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.photo-box{
+margin:auto;
+}
+
+nav ul{
+gap:14px;
+font-size:.9rem;
+}
+
+h1{
+font-size:2.3rem;
+}
+
+.subtitle{
+font-size:1.05rem;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="nav-container">
+<div class="logo">Yeqin Shen</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#activities">Activities</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="photo-box">
+
+<img src="photo.jpg" id="profileImage" alt="Profile Photo">
+
+<div class="photo-placeholder" id="placeholder">
+<b>Profile Photo</b><br><br>
+Place a file named<br><b>photo.jpg</b><br>in the same folder.
+</div>
+
+</div>
+
+<div>
+
+<h1>Yeqin Shen</h1>
+
+<div class="subtitle">
+Aspiring Student &amp; Robotics Club Captain
+</div>
+
+<p>
+Passionate about economics, finance, and lifelong learning, I strive to combine analytical thinking with creativity. Whether studying financial markets, leading student organizations, or exploring new opportunities, I enjoy challenging myself and continuously developing both academically and personally.
+</p>
+
+<a class="btn" href="#contact">Get In Touch</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+
+I am a junior at <strong>Suzhou North America High School</strong> with a growing passion for economics, finance, and the global stock market. I enjoy understanding how businesses operate, how financial decisions create value, and how economic principles shape the world around us. To gain practical experience beyond the classroom, I have invested approximately <strong>10,000 RMB</strong> in several mutual funds, including funds tracking the <strong>Nasdaq-100</strong> and the <strong>S&amp;P 500</strong>. This hands-on experience has strengthened my curiosity about investing, risk management, and long-term financial planning.
+
+<br><br>
+
+Outside academics, music has always been an important part of my life. Playing the piano and singing allow me to express creativity, stay balanced, and recharge after studying. I believe that combining analytical thinking with artistic expression helps me approach challenges from different perspectives. Looking ahead, I hope to continue expanding my knowledge, developing leadership skills, and preparing myself for future opportunities in business, finance, and technology.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+
+<h3>Financial Analysis</h3>
+
+<p>
+
+I enjoy learning about investing and financial markets through both independent research and practical experience. Managing my own mutual fund investments has strengthened my ability to analyze market trends, understand long-term investment strategies, and make thoughtful financial decisions.
+
+</p>
+
+</div>
+
+<div class="skill">
+
+<h3>Music</h3>
+
+<p>
+
+Singing and piano have helped me develop discipline, creativity, and confidence. Music provides an important balance to my academic interests and allows me to express myself while continuously improving through practice.
+
+</p>
+
+</div>
+
+<div class="skill">
+
+<h3>Golf</h3>
+
+<p>
+
+Playing golf has taught me patience, concentration, and perseverance. The sport has strengthened my ability to stay calm under pressure while emphasizing consistency, precision, and continuous self-improvement.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="activities">
+
+<h2 class="section-title">Activities & Background</h2>
+
+<div class="activity">
+
+<p>
+
+I actively pursue opportunities that combine leadership, business, and academic excellence. My achievements include earning the <strong>National Silver Prize</strong> in the <strong>National Economics Challenge (NEC)</strong>, where I strengthened my understanding of economics while working collaboratively in a competitive environment. The experience enhanced both my analytical thinking and problem-solving abilities.
+
+<br><br>
+
+In addition, I serve as the <strong>President of a BPA-certified Business Fundamentals Club</strong>. In this leadership role, I organize activities, encourage collaboration among members, and promote interest in business education. Leading the club has improved my communication, organization, and teamwork skills while giving me valuable experience managing projects and inspiring others toward shared goals.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<p>
+I would be happy to connect regarding academic opportunities, competitions, leadership experiences, or shared interests in finance, economics, and technology.
+</p>
+
+<a class="email" href="mailto:zaizaiying3@gmail.com">
+📧 zaizaiying3@gmail.com
+</a>
+
+</section>
+
+<footer>
+
+© 2026 Yeqin Shen • Built with HTML, CSS & JavaScript
+
+</footer>
+
+<script>
+const img=document.getElementById("profileImage");
+const placeholder=document.getElementById("placeholder");
+
+img.onload=function(){
+placeholder.style.display="none";
+}
+
+img.onerror=function(){
+img.style.display="none";
+placeholder.style.display="block";
+}
+
+document.querySelectorAll("nav a").forEach(link=>{
+link.addEventListener("click",function(e){
+e.preventDefault();
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+behavior:"smooth"
+});
+});
+});
+</script>
+
+</body>
+</html>
